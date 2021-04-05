@@ -16,7 +16,7 @@ var addCmd = &cobra.Command{
 		taskName := strings.Join(args, " ")
 		_, err := db.CreateTask(taskName)
 		if err != nil {
-			fmt.Println("Something went wrong", err.Error())
+			fmt.Println("Something went wrong", err)
 			os.Exit(1)
 		}
 
